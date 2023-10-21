@@ -30,6 +30,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  quantity_input: ^1.0.2
+  http: ^1.1.0
+  url_launcher: ^6.1.14
+  fluttertoast: ^8.2.2
+  shared_preferences: ^2.2.2
+  get_storage: ^2.1.1
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -52,6 +59,16 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/
+    - assets/Menu_Icon/
+    - assets/DrawerIcon/
+    - assets/Menu_Icon/menu_icon.png
+    - assets/Menu_Icon/all_order.png
+    - assets/Menu_Icon/galley_placeholder.jpg
+    - assets/Menu_Icon/food_delivery.png
+    - assets/Menu_Icon/arrow_circle.png
+    - assets/Menu_Icon/food.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
