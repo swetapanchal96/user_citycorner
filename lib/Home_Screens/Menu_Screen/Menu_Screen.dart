@@ -69,14 +69,14 @@ class _Menu_ScreenState extends State<Menu_Screen>
                   scaffoldKey.currentState?.openDrawer();
                 },
                 icon: 'assets/Menu_Icon/menu_icon.png',
-                titlename: 'Menu',actionontap: (){},actionicon: 'assets/Menu_Icon/shop_shopping.png', visible: true,)),
+                titlename: 'Menu',
+              actionontap: (){},actionicon: 'assets/Menu_Icon/shop_shopping.png', visible: true,)),
         drawer: DrawerScreen(),
         body: Container(
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(
               children: [
-
                 Expanded(
                   child: ListView.builder(
                     itemCount: 10,
@@ -144,9 +144,6 @@ class _Menu_ScreenState extends State<Menu_Screen>
                     },
                   ),
                 ),
-
-
-
               ],
             ),
           ),

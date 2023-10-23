@@ -17,7 +17,6 @@ class CustomAppBar extends StatelessWidget {
       backgroundColor: ColorName.logocolor,
 
       leading: visible ? IconButton(
-
           onPressed: () {
             ontap();
           },
