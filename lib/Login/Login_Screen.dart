@@ -8,7 +8,7 @@ import 'package:user_citycorner/CustomWidget/CustomColors.dart';
 import 'package:user_citycorner/CustomWidget/CustomTextName.dart';
 import 'package:user_citycorner/CustomWidget/CustomTextStyle.dart';
 import 'package:user_citycorner/CustomWidget/CustomboxDecoration.dart';
-import 'package:user_citycorner/Home_Screens/Menu_Screen/Menu_Screen.dart';
+import 'package:user_citycorner/Home_Screens/Menu_Screen/Categories_Screen.dart';
 
 class Login_Screen extends StatefulWidget {
   const Login_Screen({super.key});
@@ -190,7 +190,7 @@ class _Login_ScreenState extends State<Login_Screen> {
       setState(() async {
         print("Res" + value.toString());
         loginres = value;
-        if (loginres['status'] == "1") {
+        if (loginres['status'] == "success") {
           Navigator.pop(context);
           SharedPreferences prefs = await SharedPreferences.getInstance();
           prefs.setBool('isLogin', true);
@@ -204,7 +204,7 @@ class _Login_ScreenState extends State<Login_Screen> {
           GetStorage().write("strIP", loginres['strIP'].toString());
 
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => Menu_Screen()));
+                MaterialPageRoute(builder: (context) => Categories_Screen()));
 
         } else {
           Navigator.pop(context);

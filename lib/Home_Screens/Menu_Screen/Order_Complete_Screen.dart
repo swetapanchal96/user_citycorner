@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:user_citycorner/CustomWidget/CustomAppBar.dart';
 import 'package:user_citycorner/CustomWidget/CustomColors.dart';
 import 'package:user_citycorner/CustomWidget/CustomRoundButton.dart';
-import 'package:user_citycorner/Home_Screens/Menu_Screen/Menu_Screen.dart';
+import 'package:user_citycorner/Home_Screens/Menu_Screen/Categories_Screen.dart';
 import 'package:user_citycorner/My_Orders/My_Orders_Screen.dart';
 
 class Order_Complete_Screen extends StatefulWidget {
@@ -26,7 +26,7 @@ class _Order_Complete_ScreenState extends State<Order_Complete_Screen> {
             },
             icon: 'assets/Menu_Icon/menu_icon.png',
             titlename: 'Order Complete',actionontap: (){Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => Menu_Screen()));},actionicon: 'assets/Menu_Icon/home_house.png', visible: false,)),
+              builder: (context) => Categories_Screen()));},actionicon: 'assets/Menu_Icon/home_house.png', visible: false,)),
       body: Column(
         children: [
           Padding(

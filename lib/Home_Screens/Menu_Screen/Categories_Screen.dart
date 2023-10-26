@@ -6,14 +6,14 @@ import 'package:user_citycorner/Home_Screens/Menu_Screen/DrawerScreen.dart';
 import 'package:user_citycorner/Home_Screens/Menu_Screen/Special_Meals_Screen.dart';
 import 'package:user_citycorner/Login/Login_Screen.dart';
 
-class Menu_Screen extends StatefulWidget {
-  const Menu_Screen({super.key});
+class Categories_Screen extends StatefulWidget {
+  const Categories_Screen({super.key});
 
   @override
-  State<Menu_Screen> createState() => _Menu_ScreenState();
+  State<Categories_Screen> createState() => _Categories_ScreenState();
 }
 
-class _Menu_ScreenState extends State<Menu_Screen>
+class _Categories_ScreenState extends State<Categories_Screen>
     with SingleTickerProviderStateMixin {
   var scaffoldKey = GlobalKey<ScaffoldState>();
   late AnimationController _drawerSlideController;

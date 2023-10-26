@@ -22,5 +22,64 @@ class ApiService {
     }
   }
 
+  Future callYourCartListApi(Map<String, Object> jsonparam,String token) async {
+    final JsonParam = jsonEncode(jsonparam);
+    var Dataresponse;
+    try {
+      print(baseurl + "my_cart");
+      http.Response response = await http.post(
+          Uri.parse(baseurl + "my_cart"),body: JsonParam,
+          headers:{'Content-Type': 'application/json',
+            'Authorization': 'Bearer $token',
+          });
+
+      Dataresponse = JSON.jsonDecode(response.body);
+
+      return Dataresponse;
+
+    } catch (E) {
+      print("Error" + E.toString());
+    }
+  }
+
+  Future callOngoing_OrderListApi(Map<String, Object> jsonparam,String token) async {
+    final JsonParam = jsonEncode(jsonparam);
+    var Dataresponse;
+    try {
+      print(baseurl + "ongoing_order_for_branch_user");
+      http.Response response = await http.post(
+          Uri.parse(baseurl + "ongoing_order_for_branch_user"),body: JsonParam,
+          headers:{'Content-Type': 'application/json',
+            'Authorization': 'Bearer $token',
+          });
+
+      Dataresponse = JSON.jsonDecode(response.body);
+
+      return Dataresponse;
+
+    } catch (E) {
+      print("Error" + E.toString());
+    }
+  }
+
+  Future callPast_OrdersListApi(Map<String, Object> jsonparam,String token) async {
+    final JsonParam = jsonEncode(jsonparam);
+    var Dataresponse;
+    try {
+      print(baseurl + "past_order_for_branch_user");
+      http.Response response = await http.post(
+          Uri.parse(baseurl + "past_order_for_branch_user"),body: JsonParam,
+          headers:{'Content-Type': 'application/json',
+            'Authorization': 'Bearer $token',
+          });
+
+      Dataresponse = JSON.jsonDecode(response.body);
+
+      return Dataresponse;
+
+    } catch (E) {
+      print("Error" + E.toString());
+    }
+  }
 
 }
